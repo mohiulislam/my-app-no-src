@@ -1,4 +1,5 @@
-"use client";import { useEffect, useState, useRef } from "react";
+"use client";
+import { useEffect, useState, useRef } from "react";
 import axios from "axios";
 
 export default function Home() {
@@ -54,7 +55,7 @@ export default function Home() {
       );
 
       // Filter out posts that already exist in the current state
-      const newPosts = response.data
+      const newPosts = response.data;
 
       setPosts((prevPosts: any) => [...prevPosts, ...newPosts]);
     } catch (error) {
@@ -65,11 +66,12 @@ export default function Home() {
   };
 
   return (
-    <main className="bg-green-400 h-96 overflow-scroll" ref={containerRef}>
+    <main className="bg-gray-400 h-96 overflow-scroll" ref={containerRef}>
       {posts.length > 0 &&
         posts.map((post: any) => (
           <p style={{ margin: "20px" }} key={post.id}>
             {post.id}
+            {""}
             {post?.body}
           </p>
         ))}
