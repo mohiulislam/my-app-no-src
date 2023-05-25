@@ -71,7 +71,7 @@ export default function Home() {
         posts.map((post: any) => (
           <p style={{ margin: "20px" }} key={post.id}>
             {post.id}
-            {""}
+            -
             {post?.body}
           </p>
         ))}
